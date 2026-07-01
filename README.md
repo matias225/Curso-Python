@@ -1,2 +1,2 @@
-# Curso Python
+# Curso Universidad Python
 
