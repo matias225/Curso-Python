@@ -5,37 +5,66 @@ class Aritmetica:
     #     self.operando1 = operando1
 
     def __init__(self, operando1=None, operando2=None):
-        self.operando1 = operando1
-        self.operando2 = operando2
+        self._operando1 = operando1
+        self._operando2 = operando2
+
+    @property
+    def operando1(self):
+        return self._operando1
+
+    @property
+    def operando2(self):
+        return self._operando2
+
+    @operando1.setter
+    def operando1(self, operando1):
+        self._operando1 = operando1
+
+    @operando2.setter
+    def operando2(self, operando2):
+        self._operando2 = operando2
 
     def sumar(self):
-        resultado = self.operando1 + self.operando2
+        resultado = self._operando1 + self._operando2
         print(f'Resultado de la suma: {resultado}')
 
     def resta(self):
-        resultado = self.operando1 - self.operando2
+        resultado = self._operando1 - self._operando2
         print(f'Resultado de la resta: {resultado}')
 
     def multiplicar(self):
-        resultado = self.operando1 * self.operando2
+        resultado = self._operando1 * self._operando2
         print(f'Resultado de la multiplicacion: {resultado}')
 
     def dividir(self):
-        resultado = self.operando1 / self.operando2
+        resultado = self._operando1 / self._operando2
         print(f'Resultado de la division: {resultado:.2f}')
 
 # Programa principal
 if __name__ == '__main__':
     print('--- Ejemplo Clase Aritmetica---')
-    print('Primer objeto: Operando 1: 5, Operando 2: 7')
+    print('Primer objeto: ')
     aritmetica1 = Aritmetica(5, 7)
+    print(f'Valor operando1 del objeto artimetica1: {aritmetica1.operando1}')
+    print(f'Valor operando2 del objeto artimetica1: {aritmetica1.operando2}')
     aritmetica1.sumar()
     aritmetica1.resta()
     aritmetica1.multiplicar()
     aritmetica1.dividir()
+    aritmetica1.operando1 = 9
+    aritmetica1.operando2 = 15
+    print(f'Valor operando1 del objeto artimetica1: {aritmetica1.operando1}')
+    print(f'Valor operando2 del objeto artimetica1: {aritmetica1.operando2}')
+    aritmetica1.sumar()
+    aritmetica1.resta()
+    aritmetica1.multiplicar()
+    aritmetica1.dividir()
+    
     # Segundo objeto
-    print('\nSegundo objeto: Operando 1: 12, Operando 2: 16')
+    print('\nSegundo objeto: ')
     aritmetica2 = Aritmetica(12, 16)
+    print(f'Valor operando1 del objeto artimetica2: {aritmetica2.operando1}')
+    print(f'Valor operando2 del objeto artimetica2: {aritmetica2.operando2}')
     aritmetica2.sumar()
     aritmetica2.resta()
     aritmetica2.multiplicar()
