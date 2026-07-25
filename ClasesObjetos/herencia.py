@@ -9,6 +9,10 @@ class Perro(Animal):
     def hacer_sonido(self):
         print('Puedo ladrar')
 
+    # Sobreescritura el metodo dormir
+    def dormir(self):
+        print('Duermo 15 horas al dia')
+
 # Programa principal
 print('*** Ejemplo de Herencia ***')
 print('Clase Padre, soy un Animal')
