@@ -1,0 +1,5 @@
+1,Papas,70.0
+2,Galletas,35.0
+3,Alfajor,50.0
+4,Caramelos,15.0
+5,Chocolate,60.0
