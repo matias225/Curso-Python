@@ -1,4 +1,4 @@
-from zona_fit_db.conexion import Conexion
+from zona_fit_gui.conexion import Conexion
 from cliente import Cliente
 
 class ClienteDAO: # Data Access Object
